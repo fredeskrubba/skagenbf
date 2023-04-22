@@ -1,0 +1,18 @@
+@use "./variables";
+
+footer{
+    background-color: variables.$secondary-color;
+    color: variables.$main-color;
+    padding: 20px 40px;
+    gap: 10px;
+    box-sizing: border-box;
+    margin-top: 340px;
+    width: 100%;
+    section{
+        h3{
+            font-size: 20px;
+            border-bottom: 1px solid variables.$main-color;
+            padding: 5px 0;
+        }
+    }
+}

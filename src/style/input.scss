@@ -1,0 +1,10 @@
+@use "./partials/variables";
+@use "./partials/nav";
+@use "./partials/footer";
+
+
+body{
+    margin: 0;
+    font-family: variables.$main-font;
+    color: variables.$secondary-color;
+}

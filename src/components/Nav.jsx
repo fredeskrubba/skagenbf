@@ -17,12 +17,11 @@ const Nav = () => {
   return (
     <nav>
         <ActiveLink href="/">Hjem</ActiveLink>
-        <ActiveLink href="/Om">Om</ActiveLink>
-        <ActiveLink href="/Afdelinger">Afdelinger</ActiveLink>
-        <ActiveLink href="/Kontakt">Kontakt</ActiveLink>
-        <ActiveLink href="/Afdelinger">Afdelinger</ActiveLink>
-
-        <Route path="/" component={Home} />
+        <section className="nav-right-section">
+          <ActiveLink href="/Om">Om</ActiveLink>
+          <ActiveLink href="/Afdelinger">Afdelinger</ActiveLink>
+          <ActiveLink href="/Kontakt">Kontakt</ActiveLink>
+        </section>
     </nav>
   )
 }
