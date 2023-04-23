@@ -1,48 +1,23 @@
 import React from 'react'
-import Swiper from 'swiper'
-import "swiper/css"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/bundle';
+import { EffectFade } from 'swiper';
+import img1 from "../assets/img/hus-1.jpg"
+import img2 from "../assets/img/hus-2.jpg"
+import img3 from "../assets/img/hus-3.jpg"
 
 const Home = () => {
-  const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
   
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
   return (
     <section>
-      <div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    
-  </div>
-  
-  <div class="swiper-pagination"></div>
-
-  
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  
-  <div class="swiper-scrollbar"></div>
-</div>
+      <figure className='home-slider'>
+      <Swiper modules={[EffectFade]} effect="fade" loop={true}>
+      {[img1, img2, img3].map((img) => {
+        return <SwiperSlide><img src={img} alt="img" /></SwiperSlide>;
+      })}
+    </Swiper>
+      </figure>
     </section>
   )
 }
